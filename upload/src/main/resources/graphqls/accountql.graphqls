@@ -26,7 +26,7 @@ enum AccountStatus{
 
 
 type Query {
-	findAllAdharCards:[AdharCard]
-	findAdharCard(adharCardNo: ID):AdharCard
+	findAllAccounts:[Account]
+	findAccount(accountNo: ID):Account
 }
 
