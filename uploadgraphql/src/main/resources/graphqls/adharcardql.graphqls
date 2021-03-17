@@ -1,0 +1,30 @@
+type AdharCard {
+	adharCardNo: ID!
+	name: FullName
+	dob: String
+	address: Address
+	
+}
+
+type FullName{
+   firstName: String!
+   middleName: String
+   lastName: String!   
+
+}
+
+type Address{
+  doorNo: String
+  streetName: String
+  city: String
+  state: String
+  pincode: Long
+  
+
+}
+
+type Query {
+	findAllAdharCards:[AdharCard]
+	findAdharCard(adharCardNo: ID):AdharCard
+}
+
