@@ -127,7 +127,53 @@
 		    <artifactId>rsql-jpa</artifactId>
 		    <version>2.0.2</version>
          </dependency>
-          <dependency>
+         <!-- https://mvnrepository.com/artifact/com.graphql-java-kickstart/graphql-spring-boot-starter -->
+<!-- <dependency>
+    <groupId>com.graphql-java-kickstart</groupId>
+    <artifactId>graphql-spring-boot-starter</artifactId>
+    <version>5.10.0</version>
+</dependency>
+
+       <dependency>
+		<groupId>com.graphql-java-kickstart</groupId>
+		<artifactId>graphql-java-tools</artifactId>
+		<version>5.6.0</version>
+	</dependency>
+        https://mvnrepository.com/artifact/com.graphql-java-kickstart/playground-spring-boot-starter
+<dependency>
+    <groupId>com.graphql-java-kickstart</groupId>
+    <artifactId>playground-spring-boot-starter</artifactId>
+    <version>5.10.0</version>
+</dependency>
+        
+        https://mvnrepository.com/artifact/com.graphql-java-kickstart/graphiql-spring-boot-starter
+<dependency>
+    <groupId>com.graphql-java-kickstart</groupId>
+    <artifactId>graphiql-spring-boot-starter</artifactId>
+    <version>5.10.0</version>
+</dependency> -->
+	<!-- <dependency>
+	  <groupId>com.graphql-java-kickstart</groupId>
+	  <artifactId>graphql-spring-boot-starter</artifactId>
+	  <version>7.0.1</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.graphql-java-kickstart</groupId>
+	  <artifactId>graphiql-spring-boot-starter</artifactId>
+	  <version>7.0.1</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.graphql-java-kickstart</groupId>
+	  <artifactId>voyager-spring-boot-starter</artifactId>
+	  <version>7.0.1</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.graphql-java-kickstart</groupId>
+	  <artifactId>graphql-spring-boot-starter-test</artifactId>
+	  <version>7.0.1</version>
+	  <scope>test</scope>
+	</dependency> -->
+        <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
             <version>5.0.2</version>
@@ -136,20 +182,7 @@
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-tools</artifactId>
             <version>5.2.4</version>
-            <exclusions>
-            	<exclusion>
-            		<groupId>org.antlr</groupId>
-            		<artifactId>antlr4-runtime</artifactId>
-            	</exclusion>
-            </exclusions>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.graphql-java-kickstart/playground-spring-boot-starter -->
-<!-- <dependency>
-    <groupId>com.graphql-java-kickstart</groupId>
-    <artifactId>playground-spring-boot-starter</artifactId>
-    <version>5.10.0</version>
-</dependency> -->
-        
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>

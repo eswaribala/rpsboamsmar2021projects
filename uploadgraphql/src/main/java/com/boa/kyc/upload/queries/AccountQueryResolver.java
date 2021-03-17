@@ -1,4 +1,4 @@
-package com.boa.kyc.upload.resolvers;
+package com.boa.kyc.upload.queries;
 
 import java.util.List;
 
@@ -9,8 +9,9 @@ import com.boa.kyc.upload.models.Account;
 import com.boa.kyc.upload.models.Customer;
 import com.boa.kyc.upload.services.AccountService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+
 @Component
-public class AccountResolver implements GraphQLQueryResolver{
+public class AccountQueryResolver implements GraphQLQueryResolver{
    @Autowired
 	private AccountService accountService;
    

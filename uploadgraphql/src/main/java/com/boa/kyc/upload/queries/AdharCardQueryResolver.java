@@ -1,4 +1,4 @@
-package com.boa.kyc.upload.resolvers;
+package com.boa.kyc.upload.queries;
 
 import java.util.List;
 
@@ -8,8 +8,9 @@ import org.springframework.stereotype.Component;
 import com.boa.kyc.upload.models.AdharCard;
 import com.boa.kyc.upload.services.AdharCardService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+
 @Component
-public class AdharCardResolver implements GraphQLQueryResolver {
+public class AdharCardQueryResolver implements GraphQLQueryResolver {
 	@Autowired
 	private AdharCardService adharCardService;
 	

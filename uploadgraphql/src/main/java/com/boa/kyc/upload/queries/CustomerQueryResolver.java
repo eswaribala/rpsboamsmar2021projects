@@ -1,4 +1,4 @@
-package com.boa.kyc.upload.resolvers;
+package com.boa.kyc.upload.queries;
 
 import java.util.List;
 
@@ -10,8 +10,10 @@ import com.boa.kyc.upload.models.Customer;
 import com.boa.kyc.upload.services.CustomerService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
+
+
 @Component
-public class CustomerResolver implements GraphQLQueryResolver{
+public class CustomerQueryResolver implements GraphQLQueryResolver{
     @Autowired
 	private CustomerService customerService;
     

@@ -5,7 +5,7 @@ type Customer {
 }
 
 
-type Query {
+extend type Query {
 	findAllCustomers:[Customer]
 	findCustomer(customerId: ID):Customer
 }
