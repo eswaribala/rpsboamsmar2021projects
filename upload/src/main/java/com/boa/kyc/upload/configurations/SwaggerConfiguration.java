@@ -30,12 +30,13 @@ public class SwaggerConfiguration {
 	 public static final String AUTHORIZATION_HEADER = "Authorization";
 	 public static final String DEFAULT_INCLUDE_PATTERN = "/api/.*";
     @Bean
-    public Docket apiDocket() {
+    public Docket apiDocketadharCardv10() {
         return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("adharcard-api-1.0")
                 .select()
                 .apis(RequestHandlerSelectors
                         .basePackage("com.boa.kyc.upload"))
-                .paths(PathSelectors.any())
+                .paths(PathSelectors.regex("/adharcards/v1.0.*"))
                 .build()
                 .apiInfo(getApiInfo())
                 .forCodeGeneration(true)
@@ -49,7 +50,113 @@ public class SwaggerConfiguration {
                 .securitySchemes(Lists.newArrayList(apiKey()))
                 .useDefaultResponseMessages(false);
     }
-
+    @Bean
+    public Docket apiDocketadharCardv11() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("adharcard-api-1.1")
+                .select()
+                .apis(RequestHandlerSelectors
+                        .basePackage("com.boa.kyc.upload"))
+                .paths(PathSelectors.regex("/adharcards/v1.1.*"))
+                .build()
+                .apiInfo(getApiInfo())
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
+                .ignoredParameterTypes(Pageable.class)
+                .ignoredParameterTypes(java.sql.Date.class)
+                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)
+                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)
+                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)
+                .securityContexts(Lists.newArrayList(securityContext()))
+                .securitySchemes(Lists.newArrayList(apiKey()))
+                .useDefaultResponseMessages(false);
+    }
+    @Bean
+    public Docket apiDocketCustomerv10() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("customer-api-1.0")
+                .select()
+                .apis(RequestHandlerSelectors
+                        .basePackage("com.boa.kyc.upload"))
+                .paths(PathSelectors.regex("/customers/v1.0.*"))
+                .build()
+                .apiInfo(getApiInfo())
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
+                .ignoredParameterTypes(Pageable.class)
+                .ignoredParameterTypes(java.sql.Date.class)
+                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)
+                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)
+                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)
+                .securityContexts(Lists.newArrayList(securityContext()))
+                .securitySchemes(Lists.newArrayList(apiKey()))
+                .useDefaultResponseMessages(false);
+    }
+    @Bean
+    public Docket apiDocketCustomerv11() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("customer-api-1.1")
+                .select()
+                .apis(RequestHandlerSelectors
+                        .basePackage("com.boa.kyc.upload"))
+                .paths(PathSelectors.regex("/customers/v1.1.*"))
+                .build()
+                .apiInfo(getApiInfo())
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
+                .ignoredParameterTypes(Pageable.class)
+                .ignoredParameterTypes(java.sql.Date.class)
+                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)
+                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)
+                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)
+                .securityContexts(Lists.newArrayList(securityContext()))
+                .securitySchemes(Lists.newArrayList(apiKey()))
+                .useDefaultResponseMessages(false);
+    }
+    
+    
+    @Bean
+    public Docket apiDocketAccountv10() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("account-api-1.0")
+                .select()
+                .apis(RequestHandlerSelectors
+                        .basePackage("com.boa.kyc.upload"))
+                .paths(PathSelectors.regex("/accounts/v1.0.*"))
+                .build()
+                .apiInfo(getApiInfo())
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
+                .ignoredParameterTypes(Pageable.class)
+                .ignoredParameterTypes(java.sql.Date.class)
+                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)
+                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)
+                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)
+                .securityContexts(Lists.newArrayList(securityContext()))
+                .securitySchemes(Lists.newArrayList(apiKey()))
+                .useDefaultResponseMessages(false);
+    }
+    @Bean
+    public Docket apiDocketAccountv11() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("account-api-1.1")
+                .select()
+                .apis(RequestHandlerSelectors
+                        .basePackage("com.boa.kyc.upload"))
+                .paths(PathSelectors.regex("/accounts/v1.1.*"))
+                .build()
+                .apiInfo(getApiInfo())
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
+                .ignoredParameterTypes(Pageable.class)
+                .ignoredParameterTypes(java.sql.Date.class)
+                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)
+                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)
+                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)
+                .securityContexts(Lists.newArrayList(securityContext()))
+                .securitySchemes(Lists.newArrayList(apiKey()))
+                .useDefaultResponseMessages(false);
+    }
     private ApiInfo getApiInfo() {
         return new ApiInfo(
                 "Upload API",
