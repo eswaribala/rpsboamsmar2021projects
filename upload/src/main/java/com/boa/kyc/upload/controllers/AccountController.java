@@ -10,12 +10,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.boa.kyc.upload.models.Account;
 import com.boa.kyc.upload.models.Customer;
 import com.boa.kyc.upload.services.AccountService;
 import com.boa.kyc.upload.services.CustomerService;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.bohnman.squiggly.Squiggly;
+import com.github.bohnman.squiggly.util.SquigglyUtils;
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
@@ -44,4 +48,20 @@ public class AccountController {
 		{
 			return this.accountService.getAllAccounts();
 		}
+		
+		//selected fields using squiggly
+		
+		//http://localhost:7070/accounts/v1.0/filters?fields=customerId,accountNo,
+		@GetMapping({"/v1.0/filters", "/v1.1/filters"})
+	    public String getFilteredAccount(@RequestParam(name = "fields", required = false) 
+	    String fields) 
+		{
+
+			List<Account> accountList = getAllAccounts();
+			ObjectMapper mapper = Squiggly.init(new ObjectMapper(), fields);  
+			return SquigglyUtils.stringify(mapper, accountList);
+			
+	    }
+
+		
 }
