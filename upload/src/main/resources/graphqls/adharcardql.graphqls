@@ -1,23 +1,23 @@
 type AdharCard {
-	adharCardNo: ID!,
-	name: FullName,
-	dob: String,
+	adharCardNo: ID!
+	name: FullName
+	dob: String
 	address:Address
 	
 }
 
 type FullName{
-   firstName:String!,
-   middleName:String,
+   firstName:String!
+   middleName:String
    lastName:String!   
 
 }
 
 type Address{
-  doorNo:String,
-  streetName:String,
-  city:String,
-  state:String,
+  doorNo:String
+  streetName:String
+  city:String
+  state:String
   pincode:Long
   
 

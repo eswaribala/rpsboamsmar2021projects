@@ -1,0 +1,32 @@
+type Account {
+	accountNo: ID!
+	accountType: AccountType
+	customer: Customer
+	openingBalance:Long
+	accountStatus:AccountStatus
+	
+}
+
+enum AccountType{
+
+	SAVINGS
+	CURRENT
+	DEMAT
+	LOAN
+}
+
+enum AccountStatus{
+
+  ACTIVE
+  FRAUD
+  BLOCKED
+  CLOSED
+  NPA
+}
+
+
+type Query {
+	findAllAdharCards:[AdharCard]
+	findAdharCard(adharCardNo: ID):AdharCard
+}
+
