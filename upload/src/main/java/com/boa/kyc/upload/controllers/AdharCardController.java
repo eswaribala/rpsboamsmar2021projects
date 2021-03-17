@@ -15,7 +15,7 @@ import com.boa.kyc.upload.models.AdharCard;
 import com.boa.kyc.upload.services.AdharCardService;
 
 @RestController
-@RequestMapping("adharcards")
+@RequestMapping("/adharcards")
 public class AdharCardController {
 	@Autowired
 	private AdharCardService adharCardService;
