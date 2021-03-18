@@ -20,7 +20,14 @@ import graphql.schema.GraphQLSchema;
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaClient
-
+/*
+ * mutation{
+  addAdharCard(adharCardNo:"AA1234567890",name:{firstName:"Param",middleName:"",lastName:"Bala"},
+    dob:"1988-12-03",address:{doorNo:"12d",streetName:"dd st",city:"Chennai",state:"TamilNadu",pincode:600049}){
+    adharCardNo
+  }
+}
+ */
 public class UploadApplication {
 
 	public static void main(String[] args) {

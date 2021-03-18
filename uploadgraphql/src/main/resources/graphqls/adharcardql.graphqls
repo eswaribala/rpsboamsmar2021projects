@@ -27,9 +27,29 @@ type Address{
 
 }
 
+input FullNameInput {
+    firstName: String!
+    middleName: String
+    lastName: String!
+}
+
+
+input AddressInput{
+
+doorNo: String
+  streetName: String
+  city: String
+  state: String
+  pincode: Long
+}
+
 #root
 type Query {
 	findAllAdharCards:[AdharCard]
 	findAdharCard(adharCardNo: ID):AdharCard
 }
 
+type Mutation {
+    addAdharCard(adharCardNo: String!, name: FullNameInput, dob: String, address: AddressInput) : AdharCard!
+    
+}
