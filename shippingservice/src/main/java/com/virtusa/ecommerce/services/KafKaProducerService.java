@@ -59,7 +59,10 @@ public class KafKaProducerService
             public void onSuccess(SendResult<String, DeliverySchedule> result) {
             	logger.info("Sent message: " + deliverySchedule.getPlannedDeliveryDate().toString() 
             			+ " with offset: " + result.getRecordMetadata().offset());
+            	System.out.println("Sent message: " + deliverySchedule.getPlannedDeliveryDate().toString() 
+            			+ " with offset: " + result.getRecordMetadata().offset());
             }
+            
 
             @Override
             public void onFailure(Throwable ex) {
