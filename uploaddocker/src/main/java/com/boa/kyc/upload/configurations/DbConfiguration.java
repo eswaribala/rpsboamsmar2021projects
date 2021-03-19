@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Slf4j
 //@EnableConfigurationProperties(VaultConfiguration.class)
+
 public class DbConfiguration {
     @Value("${db_url}")
 	private String url;    
