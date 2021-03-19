@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-
+//configuration successful
 @Configuration
 @Data
 @Slf4j
